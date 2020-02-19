@@ -1,0 +1,47 @@
+.border{
+    border: 2px solid black;
+}
+/*.top{
+    padding: 250px 0 0 0;
+    border: 1px solid black;
+    outline: 1px solid #000;
+    margin: 1px;
+    width: 100%;
+    height: 0px;
+    display: block;
+}
+*/
+.crop-height {
+  
+	max-height: 320px;
+	overflow: hidden; 
+    border: 2px solid black;
+}
+
+img.scale {
+  
+	display: block; 
+    width: 100%;
+	max-width: 100%;
+	height: auto !important;
+  display: block;
+    width: 100%  }
+
+.flip {
+	-webkit-transform: rotate(180deg);
+	-moz-transform:    rotate(180deg);
+	-ms-transform:     rotate(180deg);
+	-o-transform:      rotate(180deg);
+	transform:         rotate(180deg);
+	/* needed? not sure */
+	zoom: 1; }
+
+img.flip {
+	/* actually, aligns left within .cropheight */
+  float: right;
+	/* clearfix after? */ }
+.size{
+    width: 800px;
+    height: 500px;
+    margin-left: 25%;
+}
