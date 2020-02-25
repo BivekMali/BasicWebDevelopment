@@ -1,0 +1,11 @@
+{
+    "extends": "../tsconfig.base.json",
+    "compilerOptions": {
+         "removeComments": true,
+        // "outFile": "../myCompliedOutput/app.js"
+    },
+  "files": [
+    "./app.ts"
+  ]
+  
+}

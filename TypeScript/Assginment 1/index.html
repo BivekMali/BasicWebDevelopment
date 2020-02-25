@@ -1,0 +1,111 @@
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/united.bootstrap.min.css">
+    <title>Student</title>
+</head>
+<body>
+    
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <span class="navbar-brand">MultiMath</span>
+            </div>
+        </div>
+    </nav>
+    <form id="Id">
+    <div class="form-horizontal" id="nameform">
+        <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="name" size="20" required />
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="age" class="col-sm-2 control-label">Age</label>
+            <div class="col-sm-2">
+                <input type="number" class="form-control" id="age" required />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="clas" class="col-sm-2 control-label">Class</label>
+            <div class="col-sm-2">
+                <input type="number" class="form-control" id="clas" required />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="sub" class="col-sm-2 control-label">Subject</label>
+            <div class="col-sm-2">
+                <input type="text" class="form-control" id="sub" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="sub" class="col-sm-2 control-label">School</label>
+            <div class="col-sm-2">
+                <select id="sch">
+                <option value="RNPS">RNPS</option>
+                <option value="ST">ST Thomas</option>
+                <option value="MCKV">MCKV</option>
+                <option value="Don">DonBosco</option>
+                <option value="Sun">SunRise</option>
+                </select>
+                </div>
+            </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+        <input class="btn btn-primary" id="Start" value="submit" type="button">
+        
+    </div>
+</div>
+    </form>
+    
+    <div class="form-horizontal" id="game"></div>
+    <h4 id="Post"></h4>
+    <div class="col-sm-offset-2 col-sm-10" id="scores">
+        <h2>SearchBox</h2>
+        <div class="form-group">
+            <div class="col-sm-2">
+                <input type="text" class="form-control" onkeyup="myfunction()" id="myInput" placeholder="Search Box" />
+             
+                <ul id="myUL"> 
+                    <li><a href="#" id="RNPS">RNPS</a></li>
+                    <li><a href="#" id="ST">ST Thomas</a></li>
+                    <li><a href="#" id="MCKV">MCKV</a></li>
+                    <li><a href="#" id="Don">DonBosc</a></li>
+                    <li><a href="#" id="Sun">Sunrise</a></li>
+                </ul>
+            </div>
+        </div>
+        <h3>Student Name</h3>
+        <h5 id="Pos"></h5>
+    </div>
+
+    <div class="col-sm-offset-2 col-sm-10" id="messages"></div>
+    <script type="text/javascript">
+
+        function myfunction(){
+        var input, filter, ul, li,a,i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul= document.getElementById("myul");
+        li = document.getElementsByTagName('li');
+            
+        for(i=0; i<li.length;i++) {
+            a=li[i].getElementsByTagName('a')[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter)>-1) {
+                li[i].style.display="";
+            }else{
+                li[i].style.display="none";
+            }
+            }
+        }
+        
+        </script>
+    <script src="bunble.js"></script>
+    
+
+</body>
+</html>
