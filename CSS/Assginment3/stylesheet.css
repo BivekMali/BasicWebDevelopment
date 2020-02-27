@@ -1,7 +1,6 @@
 .border{
     border: 2px solid black;
 }
-
 .crop-height {
   
 	max-height: 320px;
@@ -27,9 +26,7 @@ img.scale {
 	zoom: 1; }
 
 img.flip {
-
-  float: right;
- }
+  float: right; }
 .size{
     width: 800px;
     height: 500px;
