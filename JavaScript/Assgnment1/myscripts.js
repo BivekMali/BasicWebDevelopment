@@ -38,6 +38,14 @@ function pt() {
         language: "C# and Java",
         
     };
+        if( document.getElementById("qualify").value === "-- select an option --")
+            {
+                data.qualification=''
+            }
+        if( document.getElementById("selectNumber").value === "-- select an option --")
+            {
+                data.experience=''
+            }
     
         if (document.getElementById('male').checked) {
             data.gender= "male"
