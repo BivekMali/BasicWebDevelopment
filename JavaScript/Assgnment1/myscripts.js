@@ -18,14 +18,65 @@ for (var i = 0; i < qualification.length; i++) {
     Enter.appendChild(l);
 }
 
-document.getElementById("myCheck").disabled = true;
 
-document.getElementById("myChec").disabled = true;
+var coding_language = [];
+
+function code_language(Name, IsEnabled) {
+    this.Name = Name;
+    this.IsEnabled = IsEnabled;
+}
+var language1 = new code_language("C/C++", false);
+var language2 = new code_language("Java", true ,);
+var language3 = new code_language("C#", true);
+var language4 = new code_language("PHP", false);
+var language5 = new code_language("Python", false);
+
+coding_language.push(language1);
+coding_language.push(language2);
+coding_language.push(language3);
+coding_language.push(language4);
+coding_language.push(language5);
+
+var clist = document.getElementById('checkkbox')
+for (i = 0; i < coding_language.length; i++) {
+    var checkbox = document.createElement('input');
+    var label = document.createElement('label');
+    label.htmlFor = i;
+    checkbox.type = "checkbox";
+    checkbox.value = coding_language[i].Name;
+    checkbox.checked = coding_language[i].IsEnabled;
+    checkbox.id = i;
+    clist.appendChild(checkbox);
+    clist.appendChild(label);
+    label.appendChild(document.createTextNode(coding_language[i].Name));
+}
+
+function tick() {
+    var list = [];
+    if (document.getElementById('0').checked) {
+        list.push(document.getElementById('0').value);
+    }
+    if (document.getElementById('1').checked) {
+        list.push(document.getElementById('1').value);
+    }
+    if (document.getElementById('2').checked) {
+        list.push(document.getElementById('2').value);
+    }
+    if (document.getElementById('3').checked) {
+        list.push(document.getElementById('3').value);
+    }
+    if (document.getElementById('4').checked) {
+        list.push(document.getElementById('4').value);
+    }
+    return list;
+}
+
 
 
 function pt() {
-  event.preventDefault();
-    var data={
+    event.preventDefault();
+    
+    var data = {
         frist_name: document.getElementById("fname").value,
         last_name: document.getElementById("lname").value,
         email: document.getElementById("email").value,
@@ -35,31 +86,14 @@ function pt() {
         gender: "None",
         qualification: document.getElementById("qualify").value,
         experience: document.getElementById("selectNumber").value,
-        language: "C# and Java",
-        
-    };
-        if( document.getElementById("qualify").value === "-- select an option --")
-            {
-                data.qualification=''
-            }
-        if( document.getElementById("selectNumber").value === "-- select an option --")
-            {
-                data.experience=''
-            }
-    
-        if (document.getElementById('male').checked) {
-            data.gender= "male"
-        }
-        if (document.getElementById('female').checked) {
-            data.gender= "female"
-        }
-        if (document.getElementById('1').checked) {
-            data.language= "C/C++ " + data.language
-        }if (document.getElementById('2').checked) {
-            data.language= "PHP " + data.language
-        }if (document.getElementById('3').checked) {
-            data.language= "Python " + data.language
-        }
-  console.log(data);  
-}
+        language: tick(),
 
+    };
+    if (document.getElementById("qualify").value === "-- select an option --") {
+        data.qualification = ''
+    }
+    if (document.getElementById("selectNumber").value === "-- select an option --") {
+        data.experience = ''
+    }
+console.log(data);
+}
