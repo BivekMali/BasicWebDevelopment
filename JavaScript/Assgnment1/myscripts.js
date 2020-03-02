@@ -19,63 +19,47 @@ for (var i = 0; i < qualification.length; i++) {
 }
 
 
-var coding_language = [];
+var code = [];
+var l1 = new set_checkbox("C/C++", false);
+var l2 = new set_checkbox("Java", true, );
+var l3 = new set_checkbox("C#", true);
+var l4 = new set_checkbox("PHP", false);
+var l5 = new set_checkbox("Python", false);
 
-function code_language(Name, IsEnabled) {
-    this.Name = Name;
-    this.IsEnabled = IsEnabled;
+code.push(l1);
+code.push(l2);
+code.push(l3);
+code.push(l4);
+code.push(l5);
+
+
+function set_checkbox(name, set) {
+    this.Name = name;
+    this.IsEnabled = set;
 }
-var language1 = new code_language("C/C++", false);
-var language2 = new code_language("Java", true ,);
-var language3 = new code_language("C#", true);
-var language4 = new code_language("PHP", false);
-var language5 = new code_language("Python", false);
 
-coding_language.push(language1);
-coding_language.push(language2);
-coding_language.push(language3);
-coding_language.push(language4);
-coding_language.push(language5);
 
-var clist = document.getElementById('checkkbox')
-for (i = 0; i < coding_language.length; i++) {
+var setlist = document.getElementById('checkkbox')
+for (i = 0; i < code.length; i++) {
     var checkbox = document.createElement('input');
     var label = document.createElement('label');
     label.htmlFor = i;
     checkbox.type = "checkbox";
-    checkbox.value = coding_language[i].Name;
-    checkbox.checked = coding_language[i].IsEnabled;
+    checkbox.value = code[i].Name;
+    checkbox.checked = code[i].IsEnabled;
     checkbox.id = i;
-    clist.appendChild(checkbox);
-    clist.appendChild(label);
-    label.appendChild(document.createTextNode(coding_language[i].Name));
+    setlist.appendChild(checkbox);
+    setlist.appendChild(label);
+    label.appendChild(document.createTextNode(code[i].Name));
 }
 
-function tick() {
-    var list = [];
-    if (document.getElementById('0').checked) {
-        list.push(document.getElementById('0').value);
-    }
-    if (document.getElementById('1').checked) {
-        list.push(document.getElementById('1').value);
-    }
-    if (document.getElementById('2').checked) {
-        list.push(document.getElementById('2').value);
-    }
-    if (document.getElementById('3').checked) {
-        list.push(document.getElementById('3').value);
-    }
-    if (document.getElementById('4').checked) {
-        list.push(document.getElementById('4').value);
-    }
-    return list;
-}
+
 
 
 
 function pt() {
     event.preventDefault();
-    
+
     var data = {
         frist_name: document.getElementById("fname").value,
         last_name: document.getElementById("lname").value,
@@ -95,5 +79,20 @@ function pt() {
     if (document.getElementById("selectNumber").value === "-- select an option --") {
         data.experience = ''
     }
-console.log(data);
+    console.log(data);
+}
+
+function tick() {
+    var list = [];
+    if (document.getElementById('0').checked)
+        list.push(document.getElementById('0').value);
+    if (document.getElementById('1').checked)
+        list.push(document.getElementById('1').value);
+    if (document.getElementById('2').checked)
+        list.push(document.getElementById('2').value);
+    if (document.getElementById('3').checked)
+        list.push(document.getElementById('3').value);
+    if (document.getElementById('4').checked)
+        list.push(document.getElementById('4').value);
+    return list;
 }
