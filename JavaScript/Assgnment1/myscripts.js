@@ -43,6 +43,7 @@ var setlist = document.getElementById('checkkbox')
 for (i = 0; i < code.length; i++) {
     var checkbox = document.createElement('input');
     var label = document.createElement('label');
+    var linebreak = document.createElement("br");
     label.htmlFor = i;
     checkbox.type = "checkbox";
     checkbox.value = code[i].Name;
@@ -50,6 +51,7 @@ for (i = 0; i < code.length; i++) {
     checkbox.id = i;
     setlist.appendChild(checkbox);
     setlist.appendChild(label);
+    setlist.appendChild(linebreak);
     label.appendChild(document.createTextNode(code[i].Name));
 }
 
