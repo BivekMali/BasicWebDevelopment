@@ -3,6 +3,7 @@
     width: 800px;
     height: 500px;
     border: 0.5px solid black;
+    
 }
 .parent2{
     background: #FF9999;
@@ -21,37 +22,39 @@
 }
 .yellow{
     background-color: yellow;
-    width: 70%;
+    width: 576.9px;
     height: 300px;
     float: left;
     
-    border: 2px solid black;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
 }
 .child2{
     float: left;
     position: relative;
-    text-align: center;
+    margin-top: 5px;
+    margin-left: 5.5px;
+	width: 98%;
+	height: 100%;
+	padding-top:0px;
     
 }
 #text1{
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 240px;
     transform: translate(-50%,-50%);
     color: white;
+    font-size: 22px;
     
 }
 
 .child3{
-    float: right;
     position: relative;
     text-align: center;
-}
-#text2{
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%,50%);
+    margin-left: 5px;
+	margin-top: 5px;
 }
 img{
     max-width: 99%;
@@ -61,9 +64,13 @@ img{
 .gray{
     
   background-color: #ECECFB;
-    width: 28.8%;
-    height: 298px;
+    width: 200.9px;
+    height: 300px;
     float: right;
-    border: 2px solid black;
+	border-right: 1.5px solid black;
+	border-bottom:  1.5px solid black;
+    border-left: 1.5px solid black;
+    border-top: 2px solid black;
+
 
 }
