@@ -6,7 +6,9 @@ hr{
 	border-top:1.5px dotted;
 	color: #80007E;
 }
-
+.purple{
+    color: #80007E;
+}
 
 .try1{
     float: left;
@@ -22,12 +24,6 @@ hr{
 	margin-right: 30px;
 
 }
-.purple{
-    
-	color: #80007E;
-}
-    
-}
 
 .try3 {
 	border: 1.5px solid black;
@@ -35,6 +31,8 @@ hr{
 	padding-left: 5px;
 	padding-top: 5px;
 	padding-bottom: 5px;
+    
+    font-size: 17px;
 }
 .try4 {
 	border:1.5px #FF7F00;
@@ -43,6 +41,8 @@ hr{
 	padding-right: 5px;
 	padding-top: 5px;
 	padding-bottom: 5px;
+    
+    font-size: 17px;
 }
 .try5 {
 	border:1px #0000FF;
@@ -50,6 +50,7 @@ hr{
 	text-align: center;
 	padding-top:5px;
 	padding-bottom: 5px;
+    font-size: 17px;
 }
 .bottom-text p{
 	color: #80007E;
