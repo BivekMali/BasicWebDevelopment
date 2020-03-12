@@ -37,9 +37,9 @@
     position: relative;
     margin-top: 5px;
     margin-left: 5.5px;
-	width: 98%;
-	height: 100%;
-	padding-top:0px;
+    width: 98%;
+    height: 100%;
+    padding-top:0px;
     
 }
 #text1{
@@ -56,7 +56,7 @@
     position: relative;
     text-align: center;
     margin-left: 5px;
-	margin-top: 5px;
+    margin-top: 5px;
 }
 img{
     max-width: 99%;
@@ -65,12 +65,12 @@ img{
 }
 .gray{
     
-  background-color: #ECECFB;
+    background-color: #ECECFB;
     width: 200.9px;
     height: 300px;
     float: right;
-	border-right: 1.5px solid black;
-	border-bottom:  1.5px solid black;
+    border-right: 1.5px solid black;
+    border-bottom:  1.5px solid black;
     border-left: 1.5px solid black;
     border-top: 2px solid black;
 
