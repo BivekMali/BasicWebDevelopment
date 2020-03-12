@@ -5,17 +5,18 @@
   
 	max-height: 320px;
 	overflow: hidden; 
-    border: 2px solid black;
+	border: 2px solid black;
 }
 
 img.scale {
   
 	display: block; 
-    width: 100%;
+        width: 100%;
 	max-width: 100%;
 	height: auto !important;
-  display: block;
-    width: 100%  }
+        display: block;
+        width: 100%
+}
 
 .flip {
 	-webkit-transform: rotate(180deg);
@@ -23,10 +24,12 @@ img.scale {
 	-ms-transform:     rotate(180deg);
 	-o-transform:      rotate(180deg);
 	transform:         rotate(180deg);
-	zoom: 1; }
+	zoom: 1;
+}
 
 img.flip {
-  float: right; }
+  float: right;
+}
 .size{
     width: 800px;
     height: 500px;
